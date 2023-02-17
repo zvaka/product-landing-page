@@ -1,0 +1,309 @@
+:root {
+	--color-grey: #F0F0F0;
+	--color-orange2: #ffa31a;
+	--color-grey2: #E0E0E0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-grey);
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	overflow-x: hidden;
+}
+
+main {
+	margin: 0;
+}
+
+#header {
+	display: flex;
+	width: 100%;
+	height: 5rem;
+	justify-content: space-between;
+	align-items: center;
+	padding::0 1.2rem 0 1.2rem;
+	position: fixed;
+    top: 0;
+    left: 0;
+	z-index: 1;
+	background-color: var(--color-grey);
+}	
+
+img {
+	width: 300px;
+	height: auto;
+	padding: 0.8rem 1rem;
+}
+
+
+/***** Navigation styling *****/
+#nav-bar {
+	padding: 1.2rem;	
+	margin: 0;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#nav-bar li {
+    float: left;
+	margin-right: 2.5rem;
+}
+
+#nav-bar li a {
+    display: block;
+	color: black;
+	text-align: center;
+    text-decoration: none;
+}
+
+
+/****** Form styling *****/
+
+#h2_form {
+	position: relative;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 4rem;
+	width: 100%;
+}
+
+#form {
+	text-align: center;
+	padding: 0.5rem;
+}
+
+#email {
+	margin-bottom: 0.7rem;
+	width: 60%;
+	padding: 0.2rem;
+}
+
+#submit {
+	padding: 0.3rem;
+	background-color: #ffcc00;
+	width: 35%;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 4px;
+}
+
+.one {
+	margin-bottom: 0.1rem;
+}	
+
+
+/***** Stling Section No2: Premium Materials, Fast Shipping, Quality Assurance *****/
+
+.three-divs {
+	display: grid;
+	position: relative;
+	left: 14%;
+	width: 72%;
+	align-items: center;
+	grid-template-columns: 2fr 20fr;
+	grid-template-rows: 2fr 1fr;
+	column-gap: 1rem;
+	row-gap: 0.2rem;
+}
+
+.icon i {
+	width: 5rem;
+	color: var(--color-orange2);
+	padding: 0.5rem;	
+	font-size: 3rem;
+}
+
+.two {
+	display: block;
+	padding: 0.5rem;
+} 
+
+.two h3, p {
+	margin: 0.1rem;
+}
+
+.two h3 {
+	font-size: 1.2rem;
+}
+
+#Premium_Materials {
+	margin-top: 7rem;
+}
+
+
+/***** Styling video *****/
+
+.video-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
+
+/****** Section No4: Pricing *****/
+
+#Pricing {
+	position: relative;
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1rem;
+	text-align: center;
+	padding: 0.5rem;
+	margin: 0.1rem;
+}
+    /***** For screens width max-width 1100px *****/
+
+    @media only screen and (max-width: 1100px) {
+       
+		.three-divs {
+	        left: 4%;
+	        width: 98%;
+        }
+		
+        #Pricing {
+  	        grid-template-columns: 33% 33% 33%;
+  	        margin-left: 1.5rem;
+			max-width: 90%;
+        }
+	}
+	
+	
+	/***** For screens width max-width 800px *****/
+	
+	@media only screen and (max-width: 800px) {
+        
+     	main {
+			margin: 1rem;
+		}
+		
+		#Pricing {
+  	        grid-template-columns: 20rem;
+			grid-template-rows: auto;
+  	        gap: 1rem;	
+			position: relative;
+
+		}	
+			
+        .Pricing-divs {
+  	        text-align: center;
+  	        padding: 0;
+        }
+		
+		/* Navigation max-width 800px */
+		
+		#header {
+			width: 100%;
+	        height: 8rem;
+		    display: block;
+			padding-left: 3rem; 
+        }
+		
+		#h2_form {
+			top: 5rem;
+		}
+		
+	   .three-divs {
+	        left: 0;
+	        width: 80%;   
+        }
+
+        .icon i {
+        	display: none;
+        }
+
+        .two {
+        	display: block;
+        	padding-left: 3rem;
+        	text-align: center;
+        } 
+        
+        .two h3 {
+        	font-size: 1.5rem;
+        }
+	}
+	
+	
+#Pricing h4 {
+	background-color: var(--color-grey2);
+	text-align: center;
+	padding: 1rem;
+	margin-top: 0;
+}
+
+#Pricing p {
+	text-align: center;
+	padding: 1rem;
+	line-height: 1.7rem;	
+}
+
+.Pricing_price {
+    display: block;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-bottom: 1rem;
+}
+
+.Pricing-divs {
+	border: 1px solid black;
+	padding-bottom: 1rem;
+}
+
+#footer {
+	width: 99%;
+	height: 12vh;
+	margin: 1.3rem auto 0 auto;
+	background-color: var(--color-grey2);
+	padding: 0.5rem;
+	display: grid;
+	justify-content: right;
+	align-items: flex-start;
+
+}
+
+#footer-one {
+	display: flex;
+	justify-content: right;
+	align-items: flex-start;
+	padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+#footer-one ul {
+	list-style-type: none;
+}
+
+#footer-one ul li {
+	padding-right: 1rem;
+	display: inline;
+}
+
+#footer-one ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+#footer-two {
+	display: flex;
+    color: grey;
+	font-size: 0.9rem;
+	justify-content: right;
+	align-items: flex-start;
+	padding: 0 0.5rem 1rem 0.5rem;
+}
